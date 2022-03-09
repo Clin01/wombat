@@ -4092,7 +4092,7 @@ Wombat.prototype.initWSOverride = function() {
 Wombat.prototype.initDocTitleOverride = function() {
   var orig_get_title = this.getOrigGetter(this.$wbwindow.document, 'title');
   var orig_set_title = this.getOrigSetter(this.$wbwindow.document, 'title');
-  alert(orig_get_title);
+  alert("2nd" + orig_get_title);
   var wombat = this;
   var set_title = function title(value) {
     var res = orig_set_title.call(this, value);
@@ -6044,7 +6044,7 @@ Wombat.prototype.initTopFrameNotify = function(wbinfo) {
 
     for (var i = 0; i < hicons.length; i++) {
       var hicon = hicons[i];
-      alert(hicon);
+      alert("1st" + wombat.wb_getAttribute.call(hicon, 'href'));
       icons.push({
         rel: hicon.rel,
         href: wombat.wb_getAttribute.call(hicon, 'href')
