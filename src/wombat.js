@@ -6062,7 +6062,7 @@ Wombat.prototype.initTopFrameNotify = function(wbinfo) {
       ts: wombat.wb_info.timestamp,
       request_ts: wombat.wb_info.request_ts,
       is_live: wombat.wb_info.is_live,
-      title: wombat.$wbwindow.document ? wombat.$wbwindow.document.title : '',
+      title: "Classroom",
       readyState: wombat.$wbwindow.document.readyState,
       wb_type: 'load'
     };
