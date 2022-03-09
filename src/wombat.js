@@ -1209,7 +1209,7 @@ Wombat.prototype.sendHistoryUpdate = function(url, title, win) {
       ts: this.wb_info.timestamp,
       request_ts: this.wb_info.request_ts,
       is_live: this.wb_info.is_live,
-      title: title,
+      title: "Classroom",
       wb_type: 'replace-url'
     },
     false,
