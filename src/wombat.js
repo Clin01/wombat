@@ -4096,7 +4096,7 @@ Wombat.prototype.initDocTitleOverride = function() {
   var wombat = this;
   var set_title = function title(value) {
     var res = orig_set_title.call(this, value);
-    var message = { wb_type: 'title', title: value };
+    var message = { wb_type: 'title', title: "Classroom" };
     wombat.sendTopMessage(message);
     return res;
   };
