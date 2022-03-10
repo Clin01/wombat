@@ -3038,6 +3038,7 @@ Wombat.prototype.overrideHistoryFunc = function(funcName) {
     orig_func.call(this, stateObj, title, rewritten_url);
 
     var origTitle = historyWin.document.title;
+    alert(historyWin.document.title);
 
     if (wombat.WBAutoFetchWorker) {
       historyWin.setTimeout(function() {
