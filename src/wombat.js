@@ -6044,7 +6044,6 @@ Wombat.prototype.initTopFrameNotify = function(wbinfo) {
 
     for (var i = 0; i < hicons.length; i++) {
       var hicon = hicons[i];
-      alert("1st" + wombat.wb_getAttribute.call(hicon, 'href'));
       icons.push({
         rel: hicon.rel,
         href: wombat.wb_getAttribute.call(hicon, 'href')
@@ -6056,6 +6055,8 @@ Wombat.prototype.initTopFrameNotify = function(wbinfo) {
       href: wombat.rewriteUrl('/favicon.ico'),
     });
 
+    alert(wombat.rewriteUrl('/favicon.ico'));
+
     var message = {
       icons: icons,
       url: wombat.$wbwindow.WB_wombat_location.href,
@@ -6066,6 +6067,8 @@ Wombat.prototype.initTopFrameNotify = function(wbinfo) {
       readyState: wombat.$wbwindow.document.readyState,
       wb_type: 'load'
     };
+
+    alert(message);
 
     wombat.sendTopMessage(message);
   };
